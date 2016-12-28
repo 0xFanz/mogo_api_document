@@ -9,7 +9,7 @@ Updating
 # Group Restaurants
 Search and manage restaurants.
 
-## Restaurants List [/restaurants{?people,sortBy,priceFrom,priceTo,rating,cuisine,number,hasDiscount}]
+## Restaurants List [/restaurants{?people,sortBy,priceFrom,priceTo,rating,cuisine,hasDiscount,lat,long,distance,number}]
 
 ### Get Restaurants List [GET]
 
@@ -26,6 +26,9 @@ Search and manage restaurants.
     + rating (required, integer, `4`)
     + cuisine (required, integer, `1`)
     + hasDiscount (optional, integer, `1`)
+    + lat (required, float, `40.7641`) ... Latitude của location hiện tại
+    + long (required, float, `-73.9866`) ... Longitude của location hiện tại
+    + distance (required, integer, `20`) ... độ lớn radius muốn quét
     + number = `20` (optional, integer, `25`) ... Số lượng nhà hàng muốn lấy
 
 
@@ -38,6 +41,8 @@ Search and manage restaurants.
                     "name": "Kielisski",
                     "rating" : "4",
                     "time_waiting" : "10",
+                    "lat" : "40.7641",
+                    "long" : "-73.9866",
                     "categories" : {
                         "data" : [
                             {
@@ -56,6 +61,8 @@ Search and manage restaurants.
                     "name": "Hokkaido Shushi",
                     "rating" : "5",
                     "time_waiting" : "30",
+                    "lat" : "40.7641",
+                    "long" : "-73.9866",
                     "categories" : {
                         "data" : [
                             {
@@ -64,41 +71,6 @@ Search and manage restaurants.
                             }
                         ]
                     }
-                },
-            ]
-        }
-
-## Restaurants Map [/restaurants/map{?people,lat,long,distance}]
-
-### Get Restaurants Map [GET]
-
-+ Parameters
-
-    + people (required, integer, `2`) ... Số lượng người
-    + lat (required, float, `40.7641`) ... Latitude của location hiện tại
-    + long (required, float, `-73.9866`) ... Longitude của location hiện tại
-    + distance (required, integer, `20`) ... độ lớn radius muốn quét
-
-
-+ Response 200 (application/json)
-
-        {
-            "data": [
-                {
-                    "id": 2,
-                    "name": "Kielisski",
-                    "rating" : "4",
-                    "time_waiting" : "10",
-                    "lat" : "40.7641",
-                    "long" : "-73.9866",
-                },
-                {
-                    "id": 1,
-                    "name": "Hokkaido Shushi",
-                    "rating" : "5",
-                    "time_waiting" : "30",
-                    "lat" : "40.7641",
-                    "long" : "-73.9866",
                 },
             ]
         }
