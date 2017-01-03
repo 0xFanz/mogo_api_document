@@ -6,12 +6,12 @@ HOST: http://mogo.com/api
 ## Authorization
 Updating
 
-# Group Restaurants
-Search and manage restaurants.
+# Group places
+Search and manage places.
 
-## Restaurants List [/restaurants{?people,sortBy,priceFrom,priceTo,rating,cuisine,hasDiscount,lat,long,distance,number}]
+## places List [/places{?people,sortBy,priceFrom,priceTo,rating,cuisine,hasDiscount,lat,long,distance,number}]
 
-### Get Restaurants List [GET]
+### Get places List [GET]
 
 + Parameters
 
@@ -43,6 +43,7 @@ Search and manage restaurants.
                     "time_waiting" : "10",
                     "lat" : "40.7641",
                     "long" : "-73.9866",
+                    "image" : "1.jpg",
                     "categories" : {
                         "data" : [
                             {
@@ -63,6 +64,7 @@ Search and manage restaurants.
                     "time_waiting" : "30",
                     "lat" : "40.7641",
                     "long" : "-73.9866",
+                    "image" : "1.jpg",
                     "categories" : {
                         "data" : [
                             {
@@ -75,14 +77,14 @@ Search and manage restaurants.
             ]
         }
 
-## Restaurants Detail [/restaurants/{id}]
-Manage an existing restaurants.
+## places Detail [/places/{id}]
+Manage an existing places.
 
 + Parameters
 
     + id (required, integer) ... The unique identifier of a restaurant
 
-### Get Restaurants Detail [GET]
+### Get places Detail [GET]
 
 + Response 200 (application/json)
 
@@ -93,6 +95,7 @@ Manage an existing restaurants.
                 "rating" : "4",
                 "hours" : "9:00am - 11:00pm",
                 "time_waiting" : "10",
+                "image" : "1.jpg",
                 "categories" : {
                     "data" : [
                         {
@@ -192,12 +195,12 @@ Manage an existing restaurants.
           }
         }
 
-## Restaurants Detail Reviews [/restaurants/{id}/reviews]
+## places Detail Reviews [/places/{id}/reviews]
 + Parameters
 
     + id (required, integer) ... The unique identifier of a restaurant
 
-### Get Restaurants Reviews [GET]
+### Get places Reviews [GET]
 
 + Response 200 (application/json)
 
