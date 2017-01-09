@@ -86,8 +86,8 @@ Search and manage places.
     + rating (required, integer, `4`)
     + cuisine (required, integer, `1`)
     + hasDiscount (optional, integer, `1`)
-    + lat (required, float, `40.7641`) ... Latitude của location hiện tại
-    + long (required, float, `-73.9866`) ... Longitude của location hiện tại
+    + lat (required, float, `10.747426`) ... Latitude của location hiện tại
+    + long (required, float, `106.701245`) ... Longitude của location hiện tại
     + distance (required, integer, `20`) ... độ lớn radius muốn quét
     + number = `20` (optional, integer, `25`) ... Số lượng nhà hàng muốn lấy
 
