@@ -4,7 +4,67 @@ HOST: http://mogo.com/api
 # Mogo API
 
 ## Authorization
-Updating
+API will require the `X-Auth-Token` HTTP header.
+
+```http
+X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
+```
+
+# Group Users
+
+## Login with Email [/login] 
+
+### Post Login with Email [POST]
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "email": "example@gmail.com",
+                "password": "123456"
+            }
+
+    
++ Response 200 (application/json)
+
+        {
+            "data": [
+                "id" : 1,
+                "email" : "example@gmail.com",
+                "avatar" : "1.jpg"
+                "token" : "vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1"
+            ]
+        }
+
+## Register with Email [/register] 
+
+### Post Register with Email [POST]
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "email": "example@gmail.com",
+                "plainPassword": "123456",
+                "fullname" : "Batman",
+                "phone" : "0909999999"
+            }
+
+    
++ Response 200 (application/json)
+
+        {
+            "data": [
+                "id" : 1,
+                "email" : "example@gmail.com",
+                "avatar" : "1.jpg"
+                "token" : "vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1"
+            ]
+        }
+
+
 
 # Group places
 Search and manage places.
@@ -82,7 +142,7 @@ Manage an existing places.
 
 + Parameters
 
-    + id (required, integer) ... The unique identifier of a restaurant
+    + id (required, integer) ... The unique identifier of a place
 
 ### Get places Detail [GET]
 
@@ -150,12 +210,12 @@ Manage an existing places.
                         {
                             "id" : 1,
                             "name" : "Pizza",
-                            "image_path" : "pizza.jpg"
+                            "image" : "pizza.jpg"
                         },
                         {
                             "id" : 2,
                             "name" : "Burger",
-                            "image_path" : "burger.jpg"
+                            "image" : "burger.jpg"
                         }
                     ]
                 },
@@ -166,7 +226,7 @@ Manage an existing places.
                             "name" : "Pizza",
                             "price" : "120.000 VND",
                             "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit minus ad animi soluta voluptas doloremque expedita, esse, laborum aliquid officia facere! Labore et odit cupiditate minima, distinctio nam fugit eum.",
-                            "image_path" : "pizza.jpg",
+                            "image" : "pizza.jpg",
                             "speed" : "5",
                             "delight" : "5",
                             "category_id" : 1
@@ -175,7 +235,7 @@ Manage an existing places.
                             "id" : 2,
                             "name" : "Burger",
                             "price" : "90.000 VND",
-                            "image_path" : "burger.jpg",
+                            "image" : "burger.jpg",
                             "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit minus ad animi soluta voluptas doloremque expedita, esse, laborum aliquid officia facere! Labore et odit cupiditate minima, distinctio nam fugit eum.",
                             "speed" : "4",
                             "delight" : "4",
@@ -191,14 +251,14 @@ Manage an existing places.
         {
           "error" : {
             "http_code" : 404,
-            "message" : "Restaurant Not Found"
+            "message" : "place Not Found"
           }
         }
 
 ## places Detail Reviews [/places/{id}/reviews]
 + Parameters
 
-    + id (required, integer) ... The unique identifier of a restaurant
+    + id (required, integer) ... The unique identifier of a place
 
 ### Get places Reviews [GET]
 
@@ -221,11 +281,11 @@ Manage an existing places.
                         "data" : [
                             {
                                 "id" : 1,
-                                "image_src" : "1.jpg"
+                                "image" : "1.jpg"
                             },
                             {
                                 "id" : 2,
-                                "image_src" : "2.jpg"
+                                "image" : "2.jpg"
                             }
                         ]
                     }
@@ -238,12 +298,12 @@ Manage an existing places.
         {
           "error" : {
             "http_code" : 404,
-            "message" : "Restaurant Not Found"
+            "message" : "place Not Found"
           }
         }
 
 # Group Checkins
-Search and manage checkins.
+Checkins and History.
 
 ## Check-in [/checkins]
 
@@ -254,7 +314,7 @@ Search and manage checkins.
       + Body
 
             {
-                "restaurant_id": 1,
+                "place_id": 1,
                 "people" : 2
             }
 
@@ -263,7 +323,7 @@ Search and manage checkins.
         {
             "data": [
                 "id": 1,
-                "restaurant_id": 1,
+                "place_id": 1,
                 "time": 10,
                 "created_at": "2017-04-02 18:30:00",
                 "status" : "waiting"
@@ -279,7 +339,7 @@ Search and manage checkins.
       + Body
 
             {
-                "restaurant_id": 1,
+                "place_id": 1,
                 "people" : 2,
                 "date" : "Jan 2, 2016",
                 "hours" : "7:00 AM",
@@ -308,7 +368,7 @@ Search and manage checkins.
             "data": [
                 {
                     "id": 2,
-                    "restaurant" : {
+                    "place" : {
                         "data" : [
                             "name": "Kielisski",
                             "address" : "Nguyễn Trãi",
@@ -322,7 +382,7 @@ Search and manage checkins.
                 },
                 {
                     "id": 1,
-                    "restaurant" : {
+                    "place" : {
                         "data" : [
                             "name": "Kielisski",
                             "address" : "Nguyễn Trãi",
