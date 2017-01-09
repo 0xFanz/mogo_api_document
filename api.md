@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://mogo.com/api
+HOST: http://dev.mogoapp.co/api
 
 # Mogo API
 
