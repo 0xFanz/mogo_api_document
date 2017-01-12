@@ -30,10 +30,11 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
         {
             "data": [
-                "id" : 1,
-                "email" : "example@gmail.com",
-                "avatar" : "1.jpg"
-                "token" : "vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1"
+                "id": 1,
+                "fullname": "Fanz",
+                "email": "kennyfans999@gmail.com",
+                "avatar": null,
+                "token": "4b4e860edbc82e14506561ad730e2c589e712311"
             ]
         }
 
@@ -57,19 +58,61 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
         {
             "data": [
-                "id" : 1,
-                "email" : "example@gmail.com",
-                "avatar" : "1.jpg"
-                "token" : "vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1"
+                "id": 1,
+                "fullname": "Batman",
+                "email": "example@gmail.com",
+                "avatar": null,
+                "token": "4b4e860edbc82e14506561ad730e2c589e712311"
             ]
         }
 
+## Login with Email [/check-email] 
+
+### Post Check email exist [POST]
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "email": "example@gmail.com"
+            }
+
+    
++ Response 200 (application/json)
+
+        {
+            "message": {
+                "type": "success",
+                "code": 1000,
+                "msg": "You can use this email !"
+            }
+        }
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "email": "example@gmail.com"
+            }
+
+
++ Response 200 (application/json)
+
+        {
+            "message": {
+                "type": "error",
+                "code": 1001,
+                "msg": "Email already exist !"
+            }
+        }
 
 
 # Group places
 Search and manage places.
 
-## places List [/places{?people,sortBy,priceFrom,priceTo,rating,cuisine,hasDiscount,lat,long,distance,number}]
+## places List [/places{?people,sortBy,priceFrom,priceTo,rating,cuisine,hasDiscount,lat,long,number}]
 
 ### Get places List [GET]
 
@@ -82,13 +125,12 @@ Search and manage places.
         + `localtion`
         + `favorite`
     + priceFrom (required, integer, `0`) 
-    + priceTo (required, integer, `1000`)
+    + priceTo (required, integer, `150000`)
     + rating (required, integer, `4`)
     + cuisine (required, integer, `1`)
     + hasDiscount (optional, integer, `1`)
     + lat (required, float, `10.747426`) ... Latitude của location hiện tại
     + long (required, float, `106.701245`) ... Longitude của location hiện tại
-    + distance (required, integer, `20`) ... độ lớn radius muốn quét
     + number = `20` (optional, integer, `25`) ... Số lượng nhà hàng muốn lấy
 
 
@@ -97,13 +139,14 @@ Search and manage places.
         {
             "data": [
                 {
-                    "id": 2,
-                    "name": "Kielisski",
-                    "rating" : "4",
-                    "time_waiting" : "10",
-                    "lat" : "40.7641",
-                    "long" : "-73.9866",
-                    "image" : "1.jpg",
+                    "id": 11,
+                    "name": "Ramiro",
+                    "rating": 0,
+                    "time_waiting": 900,
+                    "latitude": "10.779011000000",
+                    "longitude": "106.720009000000",
+                    "discount": 5,
+                    "distance": 4.07,
                     "categories" : {
                         "data" : [
                             {
@@ -118,18 +161,23 @@ Search and manage places.
                     }
                 },
                 {
-                    "id": 1,
-                    "name": "Hokkaido Shushi",
-                    "rating" : "5",
-                    "time_waiting" : "30",
-                    "lat" : "40.7641",
-                    "long" : "-73.9866",
-                    "image" : "1.jpg",
+                    "id": 80,
+                    "name": "Elenora",
+                    "rating": 0,
+                    "time_waiting": 900,
+                    "latitude": "10.710105000000",
+                    "longitude": "106.715846000000",
+                    "discount": 20,
+                    "distance": 4.45,                    
                     "categories" : {
                         "data" : [
                             {
-                                "id" : 3,
-                                "name" : "Buffet"
+                                "id" : 1,
+                                "name" : Seafood
+                            },
+                            {
+                                "id" : 2,
+                                "name" : Beef
                             }
                         ]
                     }
