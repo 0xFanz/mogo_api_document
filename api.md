@@ -55,8 +55,8 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
         {
             "data": [
                 "id": 1,
-                "fullname": "null",
-                "email": "null",
+                "fullname": "Fanz",
+                "email": "kennyfans999@gmail.com",
                 "avatar": "null",
                 "token": "4b4e860edbc82e14506561ad730e2c589e712311"
             ]
