@@ -50,7 +50,8 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
                 "email": "example@gmail.com",
                 "plainPassword": "123456",
                 "fullname" : "Batman",
-                "phone" : "0909999999"
+                "phone" : "0909999999",
+                "address" : "SG"
             }
 
     
@@ -66,7 +67,7 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
             ]
         }
 
-## Login with Email [/check-email] 
+## Check email exist [/check-email] 
 
 ### Post Check email exist [POST]
 
@@ -105,6 +106,48 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
                 "type": "error",
                 "code": 1001,
                 "msg": "Email already exist !"
+            }
+        }
+
+## Check phone number exist [/check-phone] 
+
+### Post Check phone number exist [POST]
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "phone": "090999999999"
+            }
+
+    
++ Response 200 (application/json)
+
+        {
+            "message": {
+                "type": "success",
+                "code": 1000,
+                "msg": "You can use this phone number !"
+            }
+        }
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "phone": "090999999999"
+            }
+
+
++ Response 200 (application/json)
+
+        {
+            "message": {
+                "type": "error",
+                "code": 1001,
+                "msg": "Phone number already exist !"
             }
         }
 
@@ -267,30 +310,6 @@ Manage an existing places.
                         }
                     ]
                 },
-                "menu" : {
-                    "data" : [
-                        {
-                            "id" : 1,
-                            "name" : "Pizza",
-                            "price" : "120.000 VND",
-                            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit minus ad animi soluta voluptas doloremque expedita, esse, laborum aliquid officia facere! Labore et odit cupiditate minima, distinctio nam fugit eum.",
-                            "image" : "pizza.jpg",
-                            "speed" : "5",
-                            "delight" : "5",
-                            "category_id" : 1
-                        },
-                        {
-                            "id" : 2,
-                            "name" : "Burger",
-                            "price" : "90.000 VND",
-                            "image" : "burger.jpg",
-                            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit minus ad animi soluta voluptas doloremque expedita, esse, laborum aliquid officia facere! Labore et odit cupiditate minima, distinctio nam fugit eum.",
-                            "speed" : "4",
-                            "delight" : "4",
-                            "category_id" : 2
-                        }
-                    ]
-                },
             }
         }
 
@@ -349,6 +368,44 @@ Manage an existing places.
             "message" : "place Not Found"
           }
         }
+
+## places Detail Menu [/places/{id}/menu]
++ Parameters
+
+    + id (required, integer) ... The unique identifier of a place
+
+### Get places Menu [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data" : [
+                {
+                    "id" : 1,
+                    "name" : "Pizza",
+                    "price" : "120.000 VND",
+                    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit minus ad animi soluta voluptas doloremque expedita, esse, laborum aliquid officia facere! Labore et odit cupiditate minima, distinctio nam fugit eum.",
+                    "image" : "pizza.jpg",
+                },
+                {
+                    "id" : 2,
+                    "name" : "Burger",
+                    "price" : "90.000 VND",
+                    "image" : "burger.jpg",
+                    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit minus ad animi soluta voluptas doloremque expedita, esse, laborum aliquid officia facere! Labore et odit cupiditate minima, distinctio nam fugit eum.",
+                }
+            ]
+        }
+
++ Response 404 (application/json)
+
+        {
+          "error" : {
+            "http_code" : 404,
+            "message" : "place Not Found"
+          }
+        }
+
 
 # Group Checkins
 Checkins and History.
