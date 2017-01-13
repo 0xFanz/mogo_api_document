@@ -186,8 +186,8 @@ Search and manage places.
                     "name": "Ramiro",
                     "rating": 0,
                     "time_waiting": 900,
-                    "latitude": "10.779011000000",
-                    "longitude": "106.720009000000",
+                    "latitude": "10.779011",
+                    "longitude": "106.720009",
                     "discount": 5,
                     "distance": 4.07,
                     "categories" : {
@@ -208,8 +208,8 @@ Search and manage places.
                     "name": "Elenora",
                     "rating": 0,
                     "time_waiting": 900,
-                    "latitude": "10.710105000000",
-                    "longitude": "106.715846000000",
+                    "latitude": "10.710105",
+                    "longitude": "106.715846",
                     "discount": 20,
                     "distance": 4.45,                    
                     "categories" : {
@@ -260,8 +260,8 @@ Manage an existing places.
                     ]
                 },
                 "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum natus voluptates, velit quisquam, temporibus doloremque. Odio qui quis, magni, recusandae obcaecati debitis nobis ipsum aperiam. Tempora, quam molestias est vero?",
-                "lat" : "40.7641",
-                "long" : "-73.9866",
+                "latitude": "10.710105",
+                "longitude": "106.715846",
                 "address" : "300 An Dương Vương Phường 10, Quận 5",
                 "price" : "150.000 - 600.000",
                 "payments" : {
@@ -369,12 +369,17 @@ Manage an existing places.
           }
         }
 
-## places Detail Menu [/places/{id}/menu]
+## places Detail Menu [/places/{id}/menu{?sortBy,categoryId}]
 + Parameters
-
     + id (required, integer) ... The unique identifier of a place
+    + categoryId (required, integer, `1`)
+    + sortBy (required, string, `delight`)
+        + `delight`
+        + `speed`
+        + `price`
 
 ### Get places Menu [GET]
+
 
 + Response 200 (application/json)
 
