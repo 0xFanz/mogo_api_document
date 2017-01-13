@@ -38,6 +38,31 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
             ]
         }
 
+## Login with Facebook [/login/facebook] 
+
+### Post Login with Facebook [POST]
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "token": "EAAJCKYTYO1QBAJMRoZBzJYr6ZC54mDNFDrOwOOLYB0j4HtlUTLZA7Rhc3DQ93XmUvo2VcKgSZCxD5GP4iScW7aoi8zpjLQRZArmggQ9rmDr9MUkNHNvuThgMAM77lfLajZAZBnKCGTM0MGboDIhs0msBPrDvgkM86rreKZBCi4uAuGFjTLtrgfZBK"
+            }
+
++ Response 200 (application/json)
+
+        {
+            "data": [
+                "id": 1,
+                "fullname": "null",
+                "email": "null",
+                "avatar": "null",
+                "token": "4b4e860edbc82e14506561ad730e2c589e712311"
+            ]
+        }
+
+
 ## Register with Email [/register] 
 
 ### Post Register with Email [POST]
@@ -440,7 +465,7 @@ Checkins and History.
             ]
         }
 
-## Reservation [/reservation]
+## Reservation [/reservations]
 
 ### Create Reservation [POST]
 
