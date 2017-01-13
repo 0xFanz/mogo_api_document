@@ -465,6 +465,31 @@ Checkins and History.
             ]
         }
 
+## Cancel Checkin [/checkins/cancel]
+
+### Cancel Check-in [POST]
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "place_id": 1,
+                "people" : 2
+            }
+
++ Response 201 (application/json)
+
+        {
+            "data": [
+                "id": 1,
+                "place_id": 1,
+                "time": 10,
+                "created_at": "2017-04-02 18:30:00",
+                "status" : "waiting"
+            ]
+        }
+
 ## Reservation [/reservations]
 
 ### Create Reservation [POST]
