@@ -474,8 +474,7 @@ Checkins and History.
       + Body
 
             {
-                "place_id": 1,
-                "people" : 2
+                "checkin_id": 1
             }
 
 + Response 201 (application/json)
@@ -486,7 +485,31 @@ Checkins and History.
                 "place_id": 1,
                 "time": 10,
                 "created_at": "2017-04-02 18:30:00",
-                "status" : "waiting"
+                "status" : "cancel"
+            ]
+        }
+
+## Checkout [/checkouts]
+
+### Checkout [POST]
+
++ Request (application/json)
+
+      + Body
+
+            {
+                "checkin_id": 1
+            }
+
++ Response 201 (application/json)
+
+        {
+            "data": [
+                "id": 1,
+                "place_id": 1,
+                "time": 10,
+                "created_at": "2017-04-02 18:30:00",
+                "status" : "complete"
             ]
         }
 
