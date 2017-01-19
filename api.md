@@ -67,18 +67,56 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
 ### Post Register with Email [POST]
 
-+ Request (application/json)
++ Request (multipart/form-data)
 
       + Body
 
-            {
-                "email": "example@gmail.com",
-                "plainPassword": "123456",
-                "fullname" : "Batman",
-                "phone" : "0909999999",
-                "address" : "SG"
-            }
+            ------WebKitFormBoundary7MA4YWxkTrZu0gW
+            Content-Disposition: form-data; name="file"; filename=""
+            Content-Type: 
 
+
+            ------WebKitFormBoundary7MA4YWxkTrZu0gW
+            Content-Disposition: form-data; name="user"
+
+            {"email": "hnmtuan3310@gmail.com", "fullname": "tuan hoang 3310", "plainPassword": "123456", "phone": "01674559825"}
+            ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+    
++ Response 200 (application/json)
+
+        {
+            "data": [
+                "id": 1,
+                "fullname": "Batman",
+                "email": "example@gmail.com",
+                "avatar": null,
+                "token": "4b4e860edbc82e14506561ad730e2c589e712311"
+            ]
+        }
+
+## Update Profile [/user/profile] 
+
+### Post Update Profile [POST]
+
++ Request (multipart/form-data)
+
+      + Body
+
+            ------WebKitFormBoundary7MA4YWxkTrZu0gW
+            Content-Disposition: form-data; name="file"; filename=""
+            Content-Type: 
+
+
+            ------WebKitFormBoundary7MA4YWxkTrZu0gW
+            Content-Disposition: form-data; name="fullname"
+
+            123
+            ------WebKitFormBoundary7MA4YWxkTrZu0gW
+            Content-Disposition: form-data; name="plainPassword"
+
+            123456
+            ------WebKitFormBoundary7MA4YWxkTrZu0gW--
     
 + Response 200 (application/json)
 
