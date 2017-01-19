@@ -527,32 +527,34 @@ Checkins and History.
         {
             "data": [
                 {
-                    "id": 2,
-                    "place" : {
-                        "data" : [
-                            "name": "Kielisski",
-                            "address" : "Nguyễn Trãi",
-                        ],
-                    },
-                    "date" : "7:00 Jan 2, 2017",
-                    "cost" : "3.000.000 VND",
-                    "code" : "U93DG3",
-                    "people" : 2,
-                    "status" "waiting"
+                    "id": 1,
+                    "date": "06:07 AM Jan 13, 2017",
+                    "code": null,
+                    "people": 2,
+                    "status": "waiting",
+                    "type": "checkin",
+                    "place": {
+                        "data": {
+                            "id": 1,
+                            "name": "Karli",
+                            "address": "78182 Kuhlman Hill\nLake Luigiton, MD 38272"
+                        }
+                    }
                 },
                 {
-                    "id": 1,
-                    "place" : {
-                        "data" : [
-                            "name": "Kielisski",
-                            "address" : "Nguyễn Trãi",
-                        ],
-                    },
-                    "date" : "7:00 Jan 2, 2017",
-                    "cost" : "3.000.000 VND",
-                    "code" : "U93DG3",
-                    "people" : 2,
-                    "status" "complete"
+                "id": 3,
+                "date": "16:39 PM Jan 18, 2017",
+                "code": "FBE4A7",
+                "people": 2,
+                "status": "waiting",
+                "type": "reservation",
+                "place": {
+                    "data": {
+                        "id": 1,
+                        "name": "Karli",
+                        "address": "78182 Kuhlman Hill\nLake Luigiton, MD 38272"
+                        }
+                    }
                 }
             ]
         }
