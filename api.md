@@ -31,10 +31,17 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
         {
             "data": [
                 "id": 1,
-                "fullname": "Fanz",
+                "fullname": "123",
                 "email": "kennyfans999@gmail.com",
-                "avatar": null,
-                "token": "4b4e860edbc82e14506561ad730e2c589e712311"
+                "avatar": "http://mogo.dev/media/5880e8e0ca978.jpg",
+                "phone": "01674559825",
+                "notification_email": 0,
+                "notification_sms": 0,
+                "notification_push": 0,
+                "facebook_connect": 0,
+                "google_connect": 0,
+                "twitter_connect": 0,
+                "token": "1d2aa620d5750f7940b008143883f7d35849e373"            
             ]
         }
 
@@ -55,10 +62,17 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
         {
             "data": [
                 "id": 1,
-                "fullname": "Fanz",
+                "fullname": "123",
                 "email": "kennyfans999@gmail.com",
-                "avatar": "null",
-                "token": "4b4e860edbc82e14506561ad730e2c589e712311"
+                "avatar": "http://mogo.dev/media/5880e8e0ca978.jpg",
+                "phone": "01674559825",
+                "notification_email": 0,
+                "notification_sms": 0,
+                "notification_push": 0,
+                "facebook_connect": 0,
+                "google_connect": 0,
+                "twitter_connect": 0,
+                "token": "1d2aa620d5750f7940b008143883f7d35849e373"            
             ]
         }
 
@@ -88,10 +102,17 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
         {
             "data": [
                 "id": 1,
-                "fullname": "Batman",
-                "email": "example@gmail.com",
-                "avatar": null,
-                "token": "4b4e860edbc82e14506561ad730e2c589e712311"
+                "fullname": "123",
+                "email": "kennyfans999@gmail.com",
+                "avatar": "http://mogo.dev/media/5880e8e0ca978.jpg",
+                "phone": "01674559825",
+                "notification_email": 0,
+                "notification_sms": 0,
+                "notification_push": 0,
+                "facebook_connect": 0,
+                "google_connect": 0,
+                "twitter_connect": 0,
+                "token": "1d2aa620d5750f7940b008143883f7d35849e373"            
             ]
         }
 
@@ -123,10 +144,17 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
         {
             "data": [
                 "id": 1,
-                "fullname": "Batman",
-                "email": "example@gmail.com",
-                "avatar": null,
-                "token": "4b4e860edbc82e14506561ad730e2c589e712311"
+                "fullname": "123",
+                "email": "kennyfans999@gmail.com",
+                "avatar": "http://mogo.dev/media/5880e8e0ca978.jpg",
+                "phone": "01674559825",
+                "notification_email": 0,
+                "notification_sms": 0,
+                "notification_push": 0,
+                "facebook_connect": 0,
+                "google_connect": 0,
+                "twitter_connect": 0,
+                "token": "1d2aa620d5750f7940b008143883f7d35849e373"            
             ]
         }
 
