@@ -45,6 +45,26 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
             ]
         }
 
+## Logout [/logout] 
+
+### Post Logout [POST]
+
++ Request
+
+    + Headers
+
+            X-Auth-Token : 4377316aa82e18a0d2358d759be1ee6f9c3368fd
+
++ Response 200 (application/json)
+
+        {
+            "message": {
+                "type": "success",
+                "code": 1000,
+                "msg": "Success"
+            }
+        }
+
 ## Login with Facebook [/login/facebook] 
 
 ### Post Login with Facebook [POST]
@@ -83,7 +103,7 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
 + Request (multipart/form-data)
 
-      + Body
+    + Body
 
             ------WebKitFormBoundary7MA4YWxkTrZu0gW
             Content-Disposition: form-data; name="file"; filename=""
@@ -122,7 +142,11 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
 + Request (multipart/form-data)
 
-      + Body
+    + Headers
+
+            X-Auth-Token : 4377316aa82e18a0d2358d759be1ee6f9c3368fd
+
+    + Body
 
             ------WebKitFormBoundary7MA4YWxkTrZu0gW
             Content-Disposition: form-data; name="file"; filename=""
@@ -164,7 +188,7 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
 + Request (application/json)
 
-      + Body
+    + Body
 
             {
                 "email": "example@gmail.com"
@@ -183,7 +207,7 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
 + Request (application/json)
 
-      + Body
+    + Body
 
             {
                 "email": "example@gmail.com"
@@ -206,7 +230,7 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
 + Request (application/json)
 
-      + Body
+    + Body
 
             {
                 "phone": "090999999999"
@@ -225,7 +249,7 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
 
 + Request (application/json)
 
-      + Body
+    + Body
 
             {
                 "phone": "090999999999"
@@ -512,7 +536,12 @@ Checkins and History.
 
 + Request (application/json)
 
-      + Body
+    + Headers
+
+            X-Auth-Token : 4377316aa82e18a0d2358d759be1ee6f9c3368fd
+
+
+    + Body
 
             {
                 "place_id": 1,
@@ -537,7 +566,11 @@ Checkins and History.
 
 + Request (application/json)
 
-      + Body
+    + Headers
+
+            X-Auth-Token : 4377316aa82e18a0d2358d759be1ee6f9c3368fd
+
+    + Body
 
             {
                 "checkin_id": 1
@@ -561,7 +594,11 @@ Checkins and History.
 
 + Request (application/json)
 
-      + Body
+    + Headers
+
+            X-Auth-Token : 4377316aa82e18a0d2358d759be1ee6f9c3368fd
+
+    + Body
 
             {
                 "checkin_id": 1
@@ -585,7 +622,11 @@ Checkins and History.
 
 + Request (application/json)
 
-      + Body
+    + Headers
+
+            X-Auth-Token : 4377316aa82e18a0d2358d759be1ee6f9c3368fd
+
+    + Body
 
             {
                 "place_id": 1,
@@ -610,6 +651,12 @@ Checkins and History.
 ## Histories [/histories]
 
 ### Get Histories [GET]
+
++ Request
+
+    + Headers
+
+            X-Auth-Token : 4377316aa82e18a0d2358d759be1ee6f9c3368fd
 
 + Response 200 (application/json)
 
