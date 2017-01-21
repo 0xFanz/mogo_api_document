@@ -702,7 +702,7 @@ Promotions.
 
 ### GET List Promotion [GET]
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
         {
             "data": [
@@ -724,3 +724,29 @@ Promotions.
             },        
         }
 
+## Show Promotion [/promotions/{id}/show]
+
+### GET Show Promotion [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data": {
+                "id": 1,
+                "title": "Lorem ipsum dolor sit amet",
+                "description": "consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                "place": {
+                    "data": {
+                        "id": 1,
+                        "name": "Karli",
+                        "address": "78182 Kuhlman Hill\nLake Luigiton, MD 38272"
+                    }
+                }
+            },        
+        }
+
+## Web View Promotion [/promotions/{id}/web-view]
+
+### GET Web View Promotion [GET]
+
++ Response 200 (text/html)
