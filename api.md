@@ -695,3 +695,32 @@ Checkins and History.
             ]
         }
 
+# Group Promotions
+Promotions.
+
+## List Promotion [/promotions]
+
+### GET List Promotion [GET]
+
++ Response 201 (application/json)
+
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "title": "Lorem ipsum dolor sit amet",
+                    "description": "consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                }
+            ],
+            "meta": {
+                "pagination": {
+                    "total": 1,
+                    "count": 1,
+                    "per_page": 10,
+                    "current_page": 1,
+                    "total_pages": 1,
+                    "links": []
+                }
+            },        
+        }
+
