@@ -152,15 +152,7 @@ X-Auth-Token: vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
             Content-Disposition: form-data; name="file"; filename=""
             Content-Type: 
 
-
-            ------WebKitFormBoundary7MA4YWxkTrZu0gW
-            Content-Disposition: form-data; name="fullname"
-
-            123
-            ------WebKitFormBoundary7MA4YWxkTrZu0gW
-            Content-Disposition: form-data; name="plainPassword"
-
-            123456
+            {"fullname": "tuan hoang 3310", "plainPassword": "123456", "notification_email": 1, "notification_sms" : 0, "notification_push" : 1}
             ------WebKitFormBoundary7MA4YWxkTrZu0gW--
     
 + Response 200 (application/json)
