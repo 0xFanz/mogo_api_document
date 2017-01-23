@@ -699,9 +699,11 @@ Promotions.
         {
             "data": [
                 {
-                    "id": 1,
-                    "title": "Lorem ipsum dolor sit amet",
-                    "description": "consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                    "id": 4,
+                    "title": "Accusantium rem deleniti quia adipisci aut rem.",
+                    "description": "Libero odit alias et enim. Reprehenderit autem voluptatem officiis laudantium.",
+                    "image": "http://lorempixel.com/750/230/food/?38033",
+                    "rating": 0,
                 }
             ],
             "meta": {
@@ -718,26 +720,34 @@ Promotions.
 
 ## Show Promotion [/promotions/{id}/show]
 
++ Parameters
+    + id (required, integer)
+
 ### GET Show Promotion [GET]
 
 + Response 200 (application/json)
 
         {
             "data": {
-                "id": 1,
-                "title": "Lorem ipsum dolor sit amet",
-                "description": "consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                "id": 4,
+                "title": "Accusantium rem deleniti quia adipisci aut rem.",
+                "description": "Libero odit alias et enim. Reprehenderit autem voluptatem officiis laudantium.",
+                "image": "http://lorempixel.com/750/230/food/?38033",
+                "rating": 0,
                 "place": {
                     "data": {
-                        "id": 1,
-                        "name": "Karli",
-                        "address": "78182 Kuhlman Hill\nLake Luigiton, MD 38272"
+                        "id": 19,
+                        "name": "Rhoda",
+                        "address": "83024 Khalid Knolls Apt. 939\nNorth Roselynchester, VA 24628"
                     }
                 }
             },        
         }
 
 ## Web View Promotion [/promotions/{id}/web-view]
+
++ Parameters
+    + id (required, integer)
 
 ### GET Web View Promotion [GET]
 
