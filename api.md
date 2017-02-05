@@ -476,6 +476,51 @@ Manage an existing places.
           }
         }
 
+### Create place reviews [POST]
+
++ Request (application/json)
+
+    + Headers
+
+            X-Auth-Token : 4377316aa82e18a0d2358d759be1ee6f9c3368fd
+
+
+    + Body
+
+            {
+                "place_id": 1,
+                "message" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, nam eius sint, placeat officia saepe repellat libero quaerat beatae neque nesciunt esse enim quam doloremque numquam sapiente. Nam, sit, architecto!"
+            }
+
++ Response 201 (application/json)
+
+        {
+            "data" : {
+                "user" : {
+                    "data" : {
+                        "id" : 1,
+                        "fullname" : "Sarah Johnson",
+                        "avatar" : "sarah-johnson.jpg"
+                    }
+                },
+                "created_time" : "15:20",
+                "created_date" : "15.06.2016",
+                "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ex beatae eos, facilis harum recusandae officiis tempora eum aut doloribus inventore nemo facere eaque quaerat cumque voluptatum tempore, eius qui.",
+                "images" : {
+                    "data" : [
+                        {
+                            "id" : 1,
+                            "image" : "1.jpg"
+                        },
+                        {
+                            "id" : 2,
+                            "image" : "2.jpg"
+                        }
+                    ]
+                }
+            }
+        }
+
 ## places Detail Menu [/places/{id}/menu{?sortBy,categoryId}]
 + Parameters
     + id (required, integer) ... The unique identifier of a place
