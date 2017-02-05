@@ -540,6 +540,8 @@ Manage an existing places.
           }
         }
 
+## Create Reviews [/reviews]
+
 ### Create place reviews [POST]
 
 + Request (application/json)
